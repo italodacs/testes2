@@ -8,7 +8,6 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            line-height: 1.6;
         }
         h1 {
             text-align: center;
@@ -19,32 +18,48 @@
             flex-direction: column;
             align-items: center;
         }
-        .step {
+        .step, .decision {
             background: #f4f4f4;
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 20px;
-            width: 80%;
-            margin-bottom: 20px;
+            width: 60%;
+            margin: 10px;
             position: relative;
             text-align: center;
-        }
-        .step::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 10px solid transparent;
-            border-top-color: #ddd;
         }
         .arrow {
             width: 0;
             height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid #ddd;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ddd;
+            margin: 10px 0;
+        }
+        .decision {
+            background: #e3f2fd;
+        }
+        .decision-arrow {
+            display: flex;
+            justify-content: space-around;
             margin: 20px 0;
+        }
+        .decision-arrow::before, .decision-arrow::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 10px solid transparent;
+            border-top-color: #ddd;
+            position: relative;
+            top: -10px;
+        }
+        .decision-arrow::after {
+            border-top-color: #ddd;
+        }
+        .nested {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
@@ -54,49 +69,51 @@
 
 <div class="flowchart">
     <div class="step">
-        <strong>1. Identificação e Primeira Comunicação</strong>
-        <p>Início: Colaborador trans identifica-se ou é identificado. Pode ser autoidentificação ou por meio de feedback anônimo/colega.</p>
-        <p>Confidencialidade: Garantir que todas as informações sejam mantidas em sigilo. Atribuir um ponto de contato confidencial (geralmente do RH).</p>
+        <strong>1. Identificação da pessoa colaboradora trans e primeira comunicação</strong>
+    </div>
+    <div class="arrow"></div>
+    <div class="decision">
+        <strong>2. A pessoa colaboradora deseja ter orientações da área de D&I?</strong>
+        <div class="decision-arrow">
+            <span>Sim</span>
+            <span>Não</span>
+        </div>
+    </div>
+    <div class="nested">
+        <div class="step">
+            <strong>3. Encontro para entender as necessidades e expectativas</strong>
+        </div>
+        <div class="arrow"></div>
+        <div class="step">
+            <strong>3.1 Orientação junto às áreas envolvidas para sanar as necessidades</strong>
+        </div>
+        <div class="arrow"></div>
+        <div class="step">
+            <strong>3.2 Passar informações e devolutivas para a pessoa colaboradora</strong>
+        </div>
+        <div class="arrow"></div>
+        <div class="decision">
+            <strong>3.3 Colaborador tem mais alguma questão?</strong>
+            <div class="decision-arrow">
+                <span>Sim</span>
+                <span>Não</span>
+            </div>
+        </div>
+        <div class="nested">
+            <div class="step">
+                <strong>3.3.1 Realizar outro encontro para entender a demanda</strong>
+            </div>
+            <div class="arrow"></div>
+            <div class="step">
+                <strong>3.3.2 Nos colocamos à disposição, caso precise de ajuda ou orientação</strong>
+            </div>
+        </div>
     </div>
     <div class="arrow"></div>
     <div class="step">
-        <strong>2. Primeiro Encontro de Apoio</strong>
-        <p>Agendamento: Ponto de contato do RH agenda uma reunião privada com o colaborador.</p>
-        <p>Discussão Inicial: Entender as necessidades e expectativas do colaborador. Informar sobre o programa de acolhimento e suporte disponível.</p>
-    </div>
-    <div class="arrow"></div>
-    <div class="step">
-        <strong>3. Planejamento Personalizado</strong>
-        <p>Avaliação das Necessidades: Discutir nome social e pronome preferido. Avaliar necessidades específicas, como mudanças no uniforme, instalações, etc.</p>
-        <p>Elaboração de Plano de Ação: Desenvolver um plano de ação personalizado em colaboração com o colaborador. Definir passos para transição social no ambiente de trabalho (comunicação com a equipe, atualização de documentos internos, etc.).</p>
-    </div>
-    <div class="arrow"></div>
-    <div class="step">
-        <strong>4. Comunicação com a Equipe</strong>
-        <p>Consentimento: Obter consentimento do colaborador sobre o que será comunicado e a quem.</p>
-        <p>Treinamento e Sensibilização: Treinamento de sensibilização para a equipe direta. Workshops sobre diversidade e inclusão para toda a empresa. Recursos educacionais para os colegas.</p>
-    </div>
-    <div class="arrow"></div>
-    <div class="step">
-        <strong>5. Implementação do Plano de Ação</strong>
-        <p>Atualização de Documentos: Atualizar registros internos (e-mails, crachás, etc.) conforme solicitado pelo colaborador.</p>
-        <p>Adaptações Necessárias: Implementar mudanças solicitadas (uniformes, instalações sanitárias, etc.).</p>
-        <p>Acompanhamento Contínuo: Reuniões regulares para avaliar o progresso e fazer ajustes necessários. Disponibilização de suporte contínuo (recursos de saúde mental, grupos de apoio).</p>
-    </div>
-    <div class="arrow"></div>
-    <div class="step">
-        <strong>6. Suporte Contínuo e Feedback</strong>
-        <p>Avaliação Periódica: Check-ins regulares para monitorar bem-estar e resolver qualquer problema.</p>
-        <p>Coleta de Feedback: Solicitar feedback do colaborador sobre o processo e ambiente de trabalho. Fazer ajustes baseados no feedback para melhorar o programa.</p>
-    </div>
-    <div class="arrow"></div>
-    <div class="step">
-        <strong>7. Integração e Normalização</strong>
-        <p>Promoção de um Ambiente Inclusivo: Continuar promovendo políticas de diversidade e inclusão. Garantir que as práticas inclusivas sejam normatizadas e respeitadas.</p>
-        <p>Engajamento Contínuo: Envolver o colaborador em iniciativas de diversidade e inclusão se ele estiver confortável. Manter uma comunicação aberta e um ambiente de suporte.</p>
+        <strong>4. Nos colocamos à disposição da pessoa colaboradora, caso precise de ajuda ou orientação</strong>
     </div>
 </div>
 
 </body>
 </html>
-
