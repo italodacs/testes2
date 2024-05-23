@@ -1,4 +1,4 @@
-[14:50, 23/05/2024] Mila Ribeiro: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,37 @@
             text-align: center;
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .step {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            width: 80%;
             margin-bottom: 20px;
+            position: relative;
+            text-align: center;
         }
-        .nested {
-            margin-left: 20px;
+        .step::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 10px solid transparent;
+            border-top-color: #ddd;
+        }
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #ddd;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -34,154 +52,51 @@
 
 <h1>Fluxograma de Apoio para Colaboradores Trans</h1>
 
-<ul>
-    <li class="step">
+<div class="flowchart">
+    <div class="step">
         <strong>1. Identificação e Primeira Comunicação</strong>
-        <ul class="nested">
-            <li>Início:
-                <ul class="nested">
-                    <li>Colaborador trans identifica-se ou é identificado.</li>
-                    <li>Pode ser autoidentificação ou por meio de feedback anônimo/colega.</li>
-                </ul>
-            </li>
-            <li>Confidencialidade:
-                <ul class="nested">
-                    <li>Garantir que todas as informações sejam mantidas em sigilo.</li>
-                    <li>Atribuir um ponto de contato confidencial (geralmente do RH).</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Início: Colaborador trans identifica-se ou é identificado. Pode ser autoidentificação ou por meio de feedback anônimo/colega.</p>
+        <p>Confidencialidade: Garantir que todas as informações sejam mantidas em sigilo. Atribuir um ponto de contato confidencial (geralmente do RH).</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>2. Primeiro Encontro de Apoio</strong>
-        <ul class="nested">
-            <li>Agendamento:
-                <ul class="nested">
-                    <li>Ponto de contato do RH agenda uma reunião privada com o colaborador.</li>
-                </ul>
-            </li>
-            <li>Discussão Inicial:
-                <ul class="nested">
-                    <li>Entender as necessidades e expectativas do colaborador.</li>
-                    <li>Informar sobre o programa de acolhimento e suporte disponível.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Agendamento: Ponto de contato do RH agenda uma reunião privada com o colaborador.</p>
+        <p>Discussão Inicial: Entender as necessidades e expectativas do colaborador. Informar sobre o programa de acolhimento e suporte disponível.</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>3. Planejamento Personalizado</strong>
-        <ul class="nested">
-            <li>Avaliação das Necessidades:
-                <ul class="nested">
-                    <li>Discutir nome social e pronome preferido.</li>
-                    <li>Avaliar necessidades específicas, como mudanças no uniforme, instalações, etc.</li>
-                </ul>
-            </li>
-            <li>Elaboração de Plano de Ação:
-                <ul class="nested">
-                    <li>Desenvolver um plano de ação personalizado em colaboração com o colaborador.</li>
-                    <li>Definir passos para transição social no ambiente de trabalho (comunicação com a equipe, atualização de documentos internos, etc.).</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Avaliação das Necessidades: Discutir nome social e pronome preferido. Avaliar necessidades específicas, como mudanças no uniforme, instalações, etc.</p>
+        <p>Elaboração de Plano de Ação: Desenvolver um plano de ação personalizado em colaboração com o colaborador. Definir passos para transição social no ambiente de trabalho (comunicação com a equipe, atualização de documentos internos, etc.).</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>4. Comunicação com a Equipe</strong>
-        <ul class="nested">
-            <li>Consentimento:
-                <ul class="nested">
-                    <li>Obter consentimento do colaborador sobre o que será comunicado e a quem.</li>
-                </ul>
-            </li>
-            <li>Treinamento e Sensibilização:
-                <ul class="nested">
-                    <li>Treinamento de sensibilização para a equipe direta.</li>
-                    <li>Workshops sobre diversidade e inclusão para toda a empresa.</li>
-                    <li>Recursos educacionais para os colegas.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Consentimento: Obter consentimento do colaborador sobre o que será comunicado e a quem.</p>
+        <p>Treinamento e Sensibilização: Treinamento de sensibilização para a equipe direta. Workshops sobre diversidade e inclusão para toda a empresa. Recursos educacionais para os colegas.</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>5. Implementação do Plano de Ação</strong>
-        <ul class="nested">
-            <li>Atualização de Documentos:
-                <ul class="nested">
-                    <li>Atualizar registros internos (e-mails, crachás, etc.) conforme solicitado pelo colaborador.</li>
-                </ul>
-            </li>
-            <li>Adaptações Necessárias:
-                <ul class="nested">
-                    <li>Implementar mudanças solicitadas (uniformes, instalações sanitárias, etc.).</li>
-                </ul>
-            </li>
-            <li>Acompanhamento Contínuo:
-                <ul class="nested">
-                    <li>Reuniões regulares para avaliar o progresso e fazer ajustes necessários.</li>
-                    <li>Disponibilização de suporte contínuo (recursos de saúde mental, grupos de apoio).</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Atualização de Documentos: Atualizar registros internos (e-mails, crachás, etc.) conforme solicitado pelo colaborador.</p>
+        <p>Adaptações Necessárias: Implementar mudanças solicitadas (uniformes, instalações sanitárias, etc.).</p>
+        <p>Acompanhamento Contínuo: Reuniões regulares para avaliar o progresso e fazer ajustes necessários. Disponibilização de suporte contínuo (recursos de saúde mental, grupos de apoio).</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>6. Suporte Contínuo e Feedback</strong>
-        <ul class="nested">
-            <li>Avaliação Periódica:
-                <ul class="nested">
-                    <li>Check-ins regulares para monitorar bem-estar e resolver qualquer problema.</li>
-                </ul>
-            </li>
-            <li>Coleta de Feedback:
-                <ul class="nested">
-                    <li>Solicitar feedback do colaborador sobre o processo e ambiente de trabalho.</li>
-                    <li>Fazer ajustes baseados no feedback para melhorar o programa.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="step">
+        <p>Avaliação Periódica: Check-ins regulares para monitorar bem-estar e resolver qualquer problema.</p>
+        <p>Coleta de Feedback: Solicitar feedback do colaborador sobre o processo e ambiente de trabalho. Fazer ajustes baseados no feedback para melhorar o programa.</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
         <strong>7. Integração e Normalização</strong>
-        <ul class="nested">
-            <li>Promoção de um Ambiente Inclusivo:
-                <ul class="nested">
-                    <li>Continuar promovendo políticas de diversidade e inclusão.</li>
-                    <li>Garantir que as práticas inclusivas sejam normatizadas e respeitadas.</li>
-                </ul>
-            </li>
-            <li>Engajamento Contínuo:
-                <ul class="nested">
-                    <li>Envolver o colaborador em iniciativas de diversidade e inclusão se ele estiver confortável.</li>
-                    <li>Manter uma comunicação aberta e um ambiente de suporte.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
+        <p>Promoção de um Ambiente Inclusivo: Continuar promovendo políticas de diversidade e inclusão. Garantir que as práticas inclusivas sejam normatizadas e respeitadas.</p>
+        <p>Engajamento Contínuo: Envolver o colaborador em iniciativas de diversidade e inclusão se ele estiver confortável. Manter uma comunicação aberta e um ambiente de suporte.</p>
+    </div>
+</div>
 
 </body>
 </html>
-[14:51, 23/05/2024] Mila Ribeiro: [Identificação e Primeira Comunicação]
-      |
-      v
-[Primeiro Encontro de Apoio] -> [Confidencialidade]
-      |
-      v
-[Planejamento Personalizado]
-      |
-      v
-[Comunicação com a Equipe] <-> [Consentimento]
-      |
-      v
-[Implementação do Plano de Ação] -> [Atualização de Documentos]
-      |
-      v
-[Suporte Contínuo e Feedback] <-> [Avaliação Periódica]
-      |
-      v
-[Integração e Normalização] <-> [Promoção de um Ambiente Inclusivo]
+
